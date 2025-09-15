@@ -1,0 +1,9 @@
+# Ignore nul file (Windows special file)
+nul
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore auto-commit temp files
+.temp-contribution-*
