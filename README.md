@@ -47,3 +47,31 @@ The `templates/daily-template.md` file includes the following fields that are re
 - `{{goals}}`, `{{completed}}`, `{{learned}}`, `{{problems}}`, `{{tomorrow}}`, `{{notes}}`
 
 You can edit the template according to your preferences.
+
+## Auto-commit to GitHub (Optional)
+
+To automatically keep your GitHub contribution graph green, you can set up auto-commits:
+
+1) **Setup auto-commit system:**
+```powershell
+./Setup-AutoCommit.ps1 -GitHubRepo "https://github.com/yourusername/your-repo.git"
+```
+
+2) **Manual auto-commit:**
+```powershell
+./.auto-commit.ps1
+```
+
+**Features:**
+- Automatically commits daily to keep GitHub green
+- Runs in background without user interaction
+- Creates scheduled task for daily commits at 23:59
+- Only commits when there are actual changes
+- Falls back to small commits to maintain streak
+
+**Files created:**
+- `.auto-commit.ps1` - Hidden auto-commit script
+- `Setup-AutoCommit.ps1` - Setup script
+- `.git/hooks/post-commit` - Git hook for automatic commits
+
+**Note:** This is completely optional and hidden from normal usage.
