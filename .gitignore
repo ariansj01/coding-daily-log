@@ -7,3 +7,7 @@ nul
 
 # Ignore auto-commit temp files
 .temp-contribution-*
+
+# Ignore auto-commit scripts (keep GitHub contributions private)
+.auto-commit.ps1
+Setup-AutoCommit.ps1
